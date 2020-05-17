@@ -20,32 +20,19 @@ public class VirtualPet {
         return hungerLevel;
     }
 
-    public void setHungerLevel(Integer hungerLevel) {
-        this.hungerLevel = hungerLevel;
-    }
 
     public Integer getThirstLevel() {
         return thirstLevel;
     }
 
-    public void setThirstLevel(Integer thirstLevel) {
-        this.thirstLevel = thirstLevel;
-    }
 
     public Integer getCrazyLevel() {
         return crazyLevel;
     }
 
-    public void setCrazyLevel(Integer crazyLevel) {
-        this.crazyLevel = crazyLevel;
-    }
 
     public Integer getBathroomBreak() {
         return bathroomBreak;
-    }
-
-    public void setBathroomBreak(Integer bathroomBreak) {
-        this.bathroomBreak = bathroomBreak;
     }
 
 
@@ -55,36 +42,34 @@ public class VirtualPet {
         crazyLevel++;
         bathroomBreak++;
 
-
     }
 
     public void feedPet() {
-        hungerLevel = hungerLevel - 2;
-        thirstLevel++;
+        hungerLevel = hungerLevel - 3;
         crazyLevel++;
         bathroomBreak++;
-        tick();
+
     }
 
     public void givePetWater() {
-        thirstLevel = thirstLevel - 2;
+        thirstLevel = thirstLevel - 3;
         bathroomBreak++;
-        tick();
+
 
     }
 
     public void playWithPet() {
-        hungerLevel = hungerLevel + 1;
-        thirstLevel = thirstLevel + 1;
-        crazyLevel = crazyLevel - 2;
-        tick();
+        crazyLevel = crazyLevel - 3;
+        hungerLevel++;
+        thirstLevel++;
+
+
     }
 
     public void givePetBathroomBreak() {
-        bathroomBreak = bathroomBreak - 2;
-        hungerLevel++;
-        thirstLevel++;
-        tick();
+        bathroomBreak = bathroomBreak - 3;
+        crazyLevel++;
+
 
     }
 
